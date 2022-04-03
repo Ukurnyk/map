@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Info from "./components/Info/Info";
+import ListCountry from "./components/ListCountry/ListCountry";
+import Map from "./components/Map/Map";
 
-function App() {
+const mouseTarget = document.getElementById("mouseTarget");
+if (mouseTarget)
+  mouseTarget.addEventListener("mouseenter", (e) => {
+    alert("1");
+  });
+
+function App(props) {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ListCountry ListCountryData={props.state.ListCountryData} />
+      <Info />
+      <Map MapData={props} />
     </div>
   );
 }

@@ -1,0 +1,26 @@
+.ListCountry{
+  grid-area: listCountry;
+  margin: 20px auto;
+  width: 70%;
+}
+
+.ListCountry ul{
+  list-style-type: none;
+  border: 1px solid #bfbfbf;
+  padding: 0;
+  margin: 0;
+}
+
+.ListCountry li:not(:last-child) {
+  border-bottom: 1px solid #bfbfbf;
+}
+
+.ListCountry a {
+  display: block;
+  padding: 10px;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+}
